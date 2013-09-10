@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-               BuildableName = "week_01_assignment_c.app"
-               BlueprintName = "week_01_assignment_c"
-               ReferencedContainer = "container:week_01_assignment_c.xcodeproj">
+               BuildableName = "week_01_assignment_e.app"
+               BlueprintName = "week_02_assignment_b"
+               ReferencedContainer = "container:week_02_assignment_b.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "week_01_assignment_c.app"
-            BlueprintName = "week_01_assignment_c"
-            ReferencedContainer = "container:week_01_assignment_c.xcodeproj">
+            BuildableName = "week_01_assignment_e.app"
+            BlueprintName = "week_02_assignment_b"
+            ReferencedContainer = "container:week_02_assignment_b.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -52,9 +52,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "week_01_assignment_c.app"
-            BlueprintName = "week_01_assignment_c"
-            ReferencedContainer = "container:week_01_assignment_c.xcodeproj">
+            BuildableName = "week_01_assignment_e.app"
+            BlueprintName = "week_02_assignment_b"
+            ReferencedContainer = "container:week_02_assignment_b.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -70,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "week_01_assignment_c.app"
-            BlueprintName = "week_01_assignment_c"
-            ReferencedContainer = "container:week_01_assignment_c.xcodeproj">
+            BuildableName = "week_01_assignment_e.app"
+            BlueprintName = "week_02_assignment_b"
+            ReferencedContainer = "container:week_02_assignment_b.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
