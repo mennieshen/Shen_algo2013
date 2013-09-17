@@ -11,7 +11,7 @@ void testApp::setup(){
     
     for (int i = 0; i<1000; i++) {
       circle temp;
-      temp.radius=ofRandom(ofGetWindowHeight());// every circle needs a different radius this can be done in your calss but because radius is public i can acces it from the outside
+      temp.radius=ofRandom(ofGetWindowHeight());
       myCircle.push_back(temp);
      };
     
