@@ -4,18 +4,46 @@
 void testApp::setup(){
     
     myImage.loadImage("mennie.jpg");
+    
+    int xRes = floor( myImage.getWidth() / 3.0  );
+    int yRes = floor( myImage.getHeight() / 3.0 );
+    
+    for( int y=0; y<yRes; y++ ){
+        for( int x=0; x<xRes; x++ ){
+            addParticle( x, y );
+        }
+    }
+    
+    ofBackground(0);
+}
 
+//--------------------------------------------------------------
+
+void testApp::addParticle(float x, float y) {
+    float xPos = ( x + 0.5f ) * 4.0f;
+    float yPos = ( y + 0.5f ) * 4.0f;
+    
+    particleList.push_back( Particle( ofVec2f( xPos, yPos ) ) );
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
+    
+    for( int i=0; i<particleList.size(); i++ ){
+        particleList[i].update( myImage );
+    }
 
 }
 
 //--------------------------------------------------------------
 void testApp::draw(){
     
-    myImage.draw(0, 0);
+    //myImage.draw(0, 0);
+    
+    for( int i=0; i<particleList.size(); i++ ){
+        particleList[i].draw();
+    }
+
 
 }
 

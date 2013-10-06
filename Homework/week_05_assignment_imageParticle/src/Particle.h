@@ -6,9 +6,23 @@
 //
 //
 
-#ifndef __week05_assignment_imageParticle__Particle__
-#define __week05_assignment_imageParticle__Particle__
+#pragma once
 
-#include <iostream>
+#include "ofMain.h"
 
-#endif /* defined(__week05_assignment_imageParticle__Particle__) */
+class Particle {
+public:
+    Particle( ofVec2f position );
+    
+    void update(const ofImage &img);
+    void draw();
+    
+    ofVec2f pos;
+    
+    
+    //
+    float   radius;
+    float   rValue;
+    float   gValue;
+    float   bValue;
+};

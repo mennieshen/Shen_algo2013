@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
+#include "Particle.h"
 
 class testApp : public ofBaseApp{
 
@@ -20,5 +21,9 @@ class testApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
     
         ofImage myImage;
+    
+        void addParticle(float x, float y);
+        vector<Particle>    particleList;
+
 		
 };
