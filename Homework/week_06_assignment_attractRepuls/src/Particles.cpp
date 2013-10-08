@@ -88,6 +88,9 @@ void Particles::addClockwiseForce( float px, float py, float radius, float stren
 	
 	ofVec2f diff = pos - posOfForce;
 	
+
+
+    
 	if (diff.length() < radius){
 		float pct = 1 - (diff.length() / radius);
 		diff.normalize();
@@ -101,6 +104,16 @@ void Particles::addClockwiseForce( float px, float py, float radius, float stren
 void Particles::addCounterClockwiseForce( float px, float py, float radius, float strength){
 	
 	
+    ofColor tmpForceC;
+    float blah2 = sin(ofGetElapsedTimef()) * 10;
+    tmpForceC.setHsb(240, 125 + blah2, 240);
+    tmpForceC.a = 100.0 * ofGetElapsedTimef() * 0.05;
+    clockForceColor.push_back(tmpForceC);
+    
+    for(int j = 0; j < clockForceColor.size(); j++){
+        ofSetColor(clockForceColor[j]);
+    }
+    
 	ofVec2f posOfForce;
 	posOfForce.set(px, py);
 	

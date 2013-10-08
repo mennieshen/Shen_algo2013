@@ -36,6 +36,8 @@ public:
 	
     float damping;
     
+    vector<ofColor> clockForceColor;
+    
     
     
 protected:
