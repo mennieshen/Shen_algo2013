@@ -6,9 +6,40 @@
 //
 //
 
-#ifndef __week_06_assignment_attractRepuls__Particles__
-#define __week_06_assignment_attractRepuls__Particles__
+#ifndef PARTICLE_H
+#define PARTICLE_H
 
-#include <iostream>
+#include "ofMain.h"
 
-#endif /* defined(__week_06_assignment_attractRepuls__Particles__) */
+class Particles
+{
+public:
+    ofVec2f pos;
+    ofVec2f vel;
+    ofVec2f frc;
+    
+    Particles();
+    virtual ~Particles(){};
+    
+    void resetForce();
+    void addForce(float x, float y);
+    void addDampingForce();
+    void setInitialCondition(float px, float py, float vx, float vy);
+    void update();
+    void draw();
+	
+    void addRepulsionForce( float px, float py, float radius, float strength);
+    void addAttractionForce( float px, float py, float radius, float strength);
+    void addClockwiseForce( float px, float py, float radius, float strength);
+    void addCounterClockwiseForce( float px, float py, float radius, float strength);
+	
+	
+    float damping;
+    
+    
+    
+protected:
+private:
+};
+
+#endif
