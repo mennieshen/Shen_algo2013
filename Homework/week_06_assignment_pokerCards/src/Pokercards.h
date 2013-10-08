@@ -6,9 +6,26 @@
 //
 //
 
-#ifndef __week_06_assignment_pokerCards__Pokercards__
-#define __week_06_assignment_pokerCards__Pokercards__
+#pragma once
+#include "ofMain.h"
 
-#include <iostream>
-
-#endif /* defined(__week_06_assignment_pokerCards__Pokercards__) */
+class Pokercards {
+    
+    public:
+    
+    Pokercards(ofImage barf);
+    
+    ofVec2f pos;
+    ofVec2f vel;
+    ofVec2f accel;
+    float mass;
+    
+    void applyForce( ofVec2f force );
+    void update();
+    void draw();
+    
+    ofImage img;
+    
+    
+    
+};

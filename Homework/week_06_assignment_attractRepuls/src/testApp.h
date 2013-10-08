@@ -2,8 +2,6 @@
 
 #include "ofMain.h"
 
-#include "Pokercards.h"
-
 class testApp : public ofBaseApp{
 
 	public:
@@ -20,10 +18,5 @@ class testApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
-    
-        vector<ofImage> pokerImgs;
-        vector<Pokercards> myCards;
-    
-    
-    
+		
 };
