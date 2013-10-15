@@ -3,51 +3,54 @@
 //--------------------------------------------------------------
 void testApp::setup(){
     
+    ofSetBackgroundAuto(FALSE);
+    ofEnableAlphaBlending();
     ofSetVerticalSync(true);
 	ofBackground(0,0,0);
 	ofSetCircleResolution(100);
     
-    
+    for (int i = 0; i<1000; i++) {
+      circle temp;
+      temp.radius=ofRandom(ofGetWindowHeight());
+      myCircle.push_back(temp);
+     };
     
     
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
-
-
-    scaledTime = ofGetElapsedTimeMillis() * 0.0010;
-
+    
+    for(int i = 0; i < myCircle.size(); i++){
+    myCircle[i].update();
+    }
+    
 }
 
 //--------------------------------------------------------------
 void testApp::draw(){
     
-    float hue;
-
-    // number of circles = 20
-    for (int i =0; i < 20; i++){
+    ofSetRectMode(OF_RECTMODE_CORNER);
+    ofColor semiTransparent(0, 0, 0, 255.0 * 0.03);
+    ofFill();
+    ofSetColor(semiTransparent);
+    ofRect(0,0, ofGetWindowWidth(), ofGetWindowHeight());
     
+    ofTranslate(ofGetWindowWidth() / 2, ofGetWindowHeight() / 2);
+    
+    for(int i = 0; i < myCircle.size(); i++){
+   
+        myCircle[i].draw();
         
-        hue = ofMap(i, 0, 20, 0, 255);
-        
-        ofColor c;
-        c.setHsb( hue, 255, 255);
-        
-        angle = sin(scaledTime + i);
-        
-        float newAmp = ofMap(angle, -1, 1, 40, 200);
-        
-        float x = cos(ofDegToRad(360/20 * i)) * newAmp;
-        float y = sin(ofDegToRad(360/20 * i)) * newAmp;
-        
-        ofPushMatrix();
-        ofTranslate(ofGetWindowSize()/2);
-        ofSetColor(c);
-        ofCircle(x, y, 5);
-        ofPopMatrix();
-        
+    
     }
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -55,45 +58,45 @@ void testApp::draw(){
 
 //--------------------------------------------------------------
 void testApp::keyPressed(int key){
-
+    
 }
 
 //--------------------------------------------------------------
 void testApp::keyReleased(int key){
-
+    
 }
 
 //--------------------------------------------------------------
-void testApp::mouseMoved(int x, int y ){
-
+void testApp::mouseMoved(int x, int y){
+    
 }
 
 //--------------------------------------------------------------
 void testApp::mouseDragged(int x, int y, int button){
-
+    
 }
 
 //--------------------------------------------------------------
 void testApp::mousePressed(int x, int y, int button){
-
+    
 }
 
 //--------------------------------------------------------------
 void testApp::mouseReleased(int x, int y, int button){
-
+    
 }
 
 //--------------------------------------------------------------
 void testApp::windowResized(int w, int h){
-
+    
 }
 
 //--------------------------------------------------------------
 void testApp::gotMessage(ofMessage msg){
-
+    
 }
 
 //--------------------------------------------------------------
-void testApp::dragEvent(ofDragInfo dragInfo){ 
-
+void testApp::dragEvent(ofDragInfo dragInfo){
+    
 }
