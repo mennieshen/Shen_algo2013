@@ -42,9 +42,10 @@ void testApp::update(){
 //--------------------------------------------------------------
 void testApp::draw(){
     ofPushMatrix();
-    ofTranslate( -ofGetWindowWidth(), 0);
+    //ofTranslate( -ofGetWindowWidth(), 0);
     ofSetColor(255, 255, 0);
     ofCircle(pos, 10);
+    ofPopMatrix();
 }
 
 //--------------------------------------------------------------

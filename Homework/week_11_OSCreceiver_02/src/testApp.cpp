@@ -41,6 +41,7 @@ void testApp::checkOsc(){
 
 //--------------------------------------------------------------
 void testApp::draw(){
+    ofTranslate( -ofGetWindowWidth() * 2, 0);
     ofSetColor(255,255,0);
     ofCircle(ballPos, 10);
 }
